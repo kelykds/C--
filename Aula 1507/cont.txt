@@ -1,0 +1,48 @@
+Two pointers
+
+Subarray Sums
+subsequências
+contar quantidades de subsequências com soma X
+
+Não verificar tudo...
+Faz sentido procurar o próximo?
+
+Contar a soma atual
+Quantas subsequências boas
+
+Ponteiros
+
+Aumentar -> aumentar o Ponteiros
+
+Menor que 7? move o ponteiro pra direita
+Uma vez q é 7, a subsequência é valida. Daí move o outro
+Saiu do 2 pro 4, tira 2 da soma, fica menor que 7, move o ponteiro da direita, 
+mostra 7 novamente, não faz nada com o da direita.
+move o da esquerda, tira o 4, fica 3, aumentar soma, passa
+subsequência maior que 7, esquerda, ainda maior, esquerda, 7 novamente + 1 resposta
+resp = 3
+
+amortizada O(n)
+
+Exercícios do CSES
+
+Ideia: Ilustrar o problema. Literalmente.
+
+Sum of Two Values
+Ordenar (crescente nesse caso)
+agora o ponteiro poderia mover p esquerda e direita, quebrando a logica de amortização
+começar os dois ponteiros na mesma posição -> ruim
+começar de pontas opostas!!
+(maior soma possivel pela ordenação) 
+ex: nunca 1 pq com o máximo dá só 7 menor que 8
+então: move o da direita se quer menor, move o da direita se quer maior
+
+Codeforces
+
+BBooks
+contest 279 problem B
+
+Aumentar dnv
+Subsequências de soma 8 com maior tamanho?
+aumenta esquerda e direita
+atualizando a resposta (tamanho da subsequência)
