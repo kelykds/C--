@@ -1,0 +1,14 @@
+Dado um array ordenado, encontrar um índice i tal que Ai = x ou informe que não existe
+ou seja, achar um valor e se encontrar, retornar sua posição, se não, "não existe"
+
+Funcionamento:
+Primeiro se define o intervalo inicial.
+inicialmente o valor a analisar é o array todo, então início é 0 e final = n-1
+devemos identificar o elemento central desse array: meio = (l+r)/2
+por fim, comparar o valor encontrado com X:
+se for igual, finaliza e retorna o índice do meio
+senão se x for menor, atualizamos o limite direito para r=meio-1,
+e continuamos a busca na metade inferior
+se x for maior, atualizamos o limite esquerdo
+
+repete até achar x ou que início > fim
