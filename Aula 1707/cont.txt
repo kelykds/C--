@@ -1,0 +1,19 @@
+Depth First Search
+Processo 
+-> DFS de 1,, -> 2 -> DFS de 2 -> 1 ja marcado, vai pra 3
+vizinhos
+dfs não tem propriedade, é só andar por ainda
+
+
+Breadth First Search
+Não recursiva
+Achar o menor caminho começando de um vértice v para todos os outros vertices
+Requisito: Não pode ter peso
+ex: v = 2
+d até 2 = 0
+passa pelos vizinhos do 2
+adiciona na final
+1 de distancia
+passa por todos os vizinhos e vê a distância
+vizinhos do outro não processado tira da fila os processados
+distancia = -1 (ainda não processou)
