@@ -17,3 +17,10 @@ adiciona na final
 passa por todos os vizinhos e vê a distância
 vizinhos do outro não processado tira da fila os processados
 distancia = -1 (ainda não processou)
+
+Truquezinhos
+Só um vertice -> começando de um conjunto de vértices
+Menor distância de todos para um
+Colocar esses um 2 e 5
+Daí vai achar a menor distância deles até esses um
+Minimo ou minimo
