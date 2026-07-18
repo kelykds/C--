@@ -24,3 +24,12 @@ Menor distância de todos para um
 Colocar esses um 2 e 5
 Daí vai achar a menor distância deles até esses um
 Minimo ou minimo
+
+BFS multisource
+source é o que começa
+vários inícios!
+
+Algumas vezes não vai ser óbvio o grafo
+Quando tem matriz 
+Transformado apenas pelas posições
+Andar no grid
