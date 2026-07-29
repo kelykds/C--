@@ -1,6 +1,9 @@
 Quantos valores diferentes existem? set
+
 Soma de uma subsequência contínua? soma de prefixo
+
 Contar quantas vezes cada elemento gigante apareceu? map
+
 Ordenar um vetor? sort(v.rbegin(), v.rend())
 
 Map: Para cada chave existe um valor associado. 
