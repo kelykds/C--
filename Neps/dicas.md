@@ -151,3 +151,18 @@ Struct -> ficha de cadastro:
 Um vetor de struct -> gaveta armazenadora de cada ficha
 
 Dá pra fazer uma função bool pra ordenar da forma que você quiser no sort.
+
+---
+
+// 1. Desempate por Maior Pontuação / Nota
+if (a.nota != b.nota) {
+    return a.nota > b.nota; 
+}
+
+// 2. Desempate por Menor ID (Ordem Crescente de ID)
+if (a.id != b.id) {
+    return a.id < b.id; 
+}
+
+// 3. Desempate por Ordem Alfabética (Nome)
+return a.nome < b.nome;
