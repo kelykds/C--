@@ -143,3 +143,11 @@ int main() {
     // ORDENAR USANDO A FUNÇÃO COMPARADORA:
     sort(turma.begin(), turma.end(), comparaNotas);
 }
+
+---
+
+Struct -> ficha de cadastro:
+
+Um vetor de struct -> gaveta armazenadora de cada ficha
+
+Dá pra fazer uma função bool pra ordenar da forma que você quiser no sort.
