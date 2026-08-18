@@ -2,56 +2,70 @@
 
 using namespace std;
 
-int main() {
-
-    // quem fez o primeiro? e o segundo?....
+int main() { // literalmente two pointers
 
     int n, m;
     cin >> n >> m;
 
-    int matriz[n][m];
-    
-    for (int i = 0; i < n; i++){
+    int tabuleiro[n][m]; // a lógica de um tabuleiro:
+    // (i + j) == par deve branco
+    // (i + j) == impar deve ser preto
+
+    for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            int k;
-            cin >> k;
-            matriz[i][j] = k;
+            cin >> tabuleiro[i][j];
         }
     }
 
-    int counter = 0;
+    int gotas = 0;
 
-    for (int i = 0; i < n; i++){
-        for (int j = 0; j < m; j++) {
-            if (j == 0 && i == 0) {
-                if (matriz[i][j] + matriz[i+1][j] % 2 == 0 && matriz[i][j] + matriz[i][j+1] % 2 == 0) {
-                    matriz[i][j] += 1;
-                    counter++;
-                }
-                else if (matriz[i][j] + matriz[i+1][j] % 2 == 0) {
-                    matriz[i+1][j] += 1;
-                    counter++;
+    if (tabuleiro[0][0] % 2 == 0) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if ((i+j) % 2 == 0) {
+                    if (tabuleiro[i][j] % 2 != 0) {
+                        tabuleiro[i][j] += 1;
+                        gotas++;
+                    }
+                    else break;
                 }
                 else {
-                    matriz[i][j+1] += 1;
-                    counter++;
-                }
-            }
-            else if (i == 0 && j < m - 1) {
-                if (matriz[i][j] + matriz[i][j-1] % 2 == 0 && matriz[i+1][j] + matriz[i][j] % 2 == 0 && matriz[i][j+1]) {
-                    matriz[i][j] += 1;
-                    counter++;
-                }
-                else if (matriz[i][j]) {
-                    
-                }
-            }
-            else if ((j > 0 && i > 0) && (j < m && i < n)) {
-                if (matriz[i][j] + matriz[i+1][j] % 2 == 0) {
-
+                    if (tabuleiro[i][j] % 2 == 0) {
+                        tabuleiro[i][j] += 1;
+                        gotas++;
+                    }
+                    else break;
                 }
             }
         }
+    }
+    else {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if ((i+j) % 2 == 0) {
+                    if (tabuleiro[i][j] % 2 == 0) {
+                        tabuleiro[i][j] += 1;
+                        gotas++;
+                    }
+                    else break;
+                }
+                else {
+                    if (tabuleiro[i][j] % 2 == 0) {
+                        tabuleiro[i][j] += 1;
+                        gotas++;
+                    }
+                    else break;
+                }
+            }
+        }
+    }
+    cout << gotas << "\n";
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cout << tabuleiro[i][j] << (j < m ? " " : "");
+        }
+        cout << (i < n ? "\n" : "");
     }
 
     return 0;
