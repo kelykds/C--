@@ -3,13 +3,11 @@
 using namespace std;
 
 long long rec(long long l, long long a, long long b) {
-    int s, x = a, k = 0;
-    s = x;
-    while (s < l && x < b) {
-        a++;
-        s += x;
-        k++;
-        rec(l, a, b);
+    long long s = 0, k = 0;
+    for (long long i = a; i <= b; i++) {
+            s += i;
+            k++;
+            if (s >= l) break;
     }
     return k;
 }
@@ -21,11 +19,14 @@ int main() {
     cout.tie(NULL);
 
     // muitas bolinhas na mesa, joão com caixa vazia
-    int p; cin >> p;
+    int p; 
+    cin >> p;
+
     for (int i = 0; i < p; i++) {
         long long l, a, b;
         cin >> l >> a >> b;
-        cout << rec(l, a, b) << (i < p - 1 ? "\n" : "");
+        long long re = rec(l, a, b);
+        cout << re << (i < p - 1 ? "\n" : "");
     }
     // máximo de jogadas
 
