@@ -1,11 +1,10 @@
-#include <bits/stdc++.h>
+#include <iostream> 
+#include <vector>
 
 using namespace std;
 
 vector<vector<int>> estradas; // aqui queremos a distância até um. nada de conta horrível
 vector<int> dist;
-int md;
-int nmd;
 
 void dfs(int u, int p, int d) {
     dist[u] = d;
@@ -31,6 +30,12 @@ int main () {
         estradas[u].push_back(v);
         estradas[v].push_back(u);
 
+    }
+
+    dfs(1, 0, 0);
+
+    for (int i = 1; i <= n; i++) {
+        cout << dist[i] << (i < n ? " " : "");
     }
 
     return 0;
