@@ -18,7 +18,7 @@ int main() {
         cin >> si[i];
     }
 
-    for (int i = 0; i < n; i++) {
+    while (l < r) {
         if (si[l]+si[r] == s) {
             existe = true;
             break; // será se eu vou usar certo uma vez na vida?
